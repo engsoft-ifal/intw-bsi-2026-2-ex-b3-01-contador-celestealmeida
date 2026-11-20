@@ -1,10 +1,17 @@
-// Faça o contador funcionar. Edite só este arquivo.
-//
-// TODO 1: mostre 0 no #total ao carregar a página.
-// TODO 2: ao clicar em #somar, aumente 1 e atualize o #total.
-// TODO 3: ao clicar em #zerar, volte para 0 e atualize o #total.
-//
-// Dica: document.querySelector("#total"), addEventListener("click", ...),
-//       elemento.textContent = valor.
+const totalElement = document.querySelector("#total");
+const somarButton = document.querySelector("#somar");
+const zerarButton = document.querySelector("#zerar");
 
-// escreva seu código aqui
+let total = 0;
+
+totalElement.textContent = total;
+
+somarButton.addEventListener("click", () => {
+  total += 1;
+  totalElement.textContent = total;
+});
+
+zerarButton.addEventListener("click", () => {
+  total = 0;
+  totalElement.textContent = total;
+});
